@@ -76,6 +76,19 @@ fn main() {
     let mut array: [i32; 5] = [1, 2, 3, 4, 6];
     print_arrays(array);
     println!("The elements: {array:?}");
+    println!("==================================================================================");
+
+    let mut arr: [i32; 5] = [2, 4, 6, 8, 10];
+    multiply(arr);
+    println!("The array is : {:?}", multiply(arr));
+}
+
+fn multiply(mut arr: [i32; 5]) -> [i32; 5] {
+    arr[2] = 90;
+    for mut i in 0..5 {
+        arr[i] = arr[i] * arr[2];
+    }
+    return arr;
 }
 
 fn print_arrays(mut array: [i32; 5]) {
